@@ -52,6 +52,7 @@ There are four script files in the `scripts` folder:
   - *You can run this script with the command `deno task se` (add `-r` at the end if you want the file to replace the one located in the config folder).*
 - **scrapeHianime.ts**: This is misleading, technically it's not "web scraping" anything. I couldn't get the actual web scraping part to work with the [hianime.to](https://hianime.to/) website so I instead just went to the [one piece page](https://hianime.to/watch/one-piece-100?ep=2142), inspected element, and copy and pasted the html into a file called `hianime.html` and placed the file in the folder. This script just parses that html file and downloads data relevant to the hianime one piece episode ids.
   - *You can run this script with the command `deno task sh` (add `-r` at the end if you want the file to replace the one located in the config folder).*
+  
 If you wanted to update the one piece episode and chapter information, you can run the `scrapeEpisodes.ts` and `scrapeChapters.ts` files respectively. 
 You can also manually go to the [one piece page](https://hianime.to/watch/one-piece-100?ep=2142), copy and paste the html from the page like mentioned above, and run the `scrapeHianime.ts` file to update the episode ids (in case hianime has listed more one piece episodes).
 These scrapers aren't guaranteed to work forever, if the respective website structure changes for any of the three previously mentioned scripts, then those scripts won't work.
