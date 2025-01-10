@@ -1,0 +1,7 @@
+.vscode
+node_modules
+.env
+stuff.ts
+hianime.html
+src/lib/APIs
+src/lib/util/Random.ts
