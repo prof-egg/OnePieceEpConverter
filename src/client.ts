@@ -1,10 +1,10 @@
 import { Client, GatewayIntentBits, Partials } from "discord.js";
 import "jsr:@std/dotenv/load";
-import Debug, { EColorEscape }  from "./lib/util/Debug.ts";
+import Debug from "./lib/util/Debug.ts";
 import path from "node:path"
 import EventHandler from "./lib/handlers/file-handlers/EventHandler.ts";
 
-export const client = new Client({ intents: [GatewayIntentBits.GuildEmojisAndStickers], partials: [] });
+export const client = new Client({ intents: [GatewayIntentBits.GuildExpressions], partials: [] });
 
 // const client = new Client({ intents: [] });
 const loggerID = path.parse(import.meta.url).base
