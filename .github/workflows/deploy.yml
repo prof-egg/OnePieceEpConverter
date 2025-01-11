@@ -38,4 +38,4 @@ jobs:
           entrypoint: "src/client.ts"
           root: ""
           
-          exclude: src/scripts
+          
