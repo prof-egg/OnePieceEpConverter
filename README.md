@@ -19,10 +19,10 @@ I also made some commands for just getting some information about a desired epis
 - Install [Deno](https://docs.deno.com/runtime/getting_started/installation/) using the command `choco install deno`.
 
 ### Your Discord Client 
-- Head to the [Discord Dev Portal](https://discord.com/developers/) and login using *your discord account*.
+- Head to the [Discord Dev Portal](https://discord.com/developers/) and login using *your discord account.*
 - On the left go to `Applications` and then on the top right click `New Application` and name your bot.
 - In the `Bot` tab on the left, click `reset token` and copy and paste the string of characters somewhere safe *(this is the password to your bot which will be used in the `Running the Code` section).*
-  - ***Note:*** *In this tab you can also upload a profile picture and banner for your bot*.
+  - ***Note:*** *In this tab you can also upload a profile picture and banner for your bot.*
 - Now to invite the bot, in the `OAuth2` tab on the left, check the `application.commands` and `bot` box in the **OAuth2 URL Generator** section.
 - The **Bot Permissions** section should now appear below, and you want to check `Administrator` box.
 - Below make sure **Integration Type** is `Guild Install` and copy the generated URL below.
@@ -30,15 +30,15 @@ I also made some commands for just getting some information about a desired epis
 
 ### Running the Code
 - Download and extract the **source code from this repo**, open the extracted folder in **VS Code**.
-- Run the command `deno install` in the **VS Code terminal** *(this installs the `discord.js` and `cheerio` packages which are used in the project).*
-  - ***Note:*** *To pull up a new terminal, press `ctrl+shift+~`. To open an existing terminal, press `ctrl+~`*.
 - Create a file named `.env` and put it next to your `deno.json` and `deno.lock` files. 
 - Copy and paste this string into the `.env` file: `CLIENT_LOGIN_TOKEN=YOUR_TOKEN_HERE` *(replace `YOUR_TOKEN_HERE` with the "password" from earlier).*
 - In the `client.json` file, loacted at **src > config > client.json**, replace the `id` string with the id of **your bot**.
   - ***Note:*** *`homeGuild.id` is for testing purposes, if you'd like you can replace that id with the id of your own test server. You can also run the command `deno task refresh` to upload the slash command data to just that test server.*
 - In the **VS Code terminal** run the command `deno task refresh -g` *(this will upload the slash command data to discord).*
+  - ***Note:*** *To pull up a new terminal, press `ctrl+shift+~`. To open an existing terminal, press `ctrl+~`.*
   - ***Note:*** *Any command that has `deno task` at the start is a command I've defined in the project. You can see them defined in the `deno.json` file.*
 - To run the bot, enter the command `deno task start` in the **VS Code terminal**.
+  - ***Note:*** *The first time you run the `deno task start` command, deno will install the [`discordjs`](https://discord.js.org/) and [`cheerio`](https://www.npmjs.com/package/cheerio) npm packages that are necessary for running the bot.*
 
 There you go you set it up enjoy the bot, if you want it running 24/7 you should look up how to run the bot on a server like [railway](https://railway.com/).
 
