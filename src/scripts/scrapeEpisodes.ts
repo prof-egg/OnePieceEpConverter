@@ -3,6 +3,7 @@ import Debug from "../lib/util/Debug.ts";
 import fs from "node:fs";
 import { parseArgs } from "jsr:@std/cli/parse-args";
 import Util from "../lib/util/Util.ts";
+import stringConstants from "../config/string_constants.json" with { type: "json" }
 
 const URL_BASE = "https://onepiece.fandom.com/wiki/Episode_"
 const MIN_EPISODE = 1
@@ -48,7 +49,7 @@ for (let episode = parseInt(flags.min + ""); episode <= parseInt(flags.max + "")
 }
 
 Debug.log("Writing to file...", scraperLogId)
-const path = (flags.r || flags.replace) ? "./src/config/episode_data.json" : "episode_data.json"
+const path = (flags.r || flags.replace) ? `./src/config/${stringConstants.episodeDataFileName}` : stringConstants.episodeDataFileName
 fs.writeFile(path, JSON.stringify(pageDetails), ((err) => (err) ? Debug.logError(err.message, scraperLogId) : null))
 
 Debug.logImportant("Finished!", scraperLogId)

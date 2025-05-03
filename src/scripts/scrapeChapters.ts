@@ -2,6 +2,7 @@ import * as cheerio from 'cheerio';
 import Debug from "../lib/util/Debug.ts";
 import fs from "node:fs";
 import { parseArgs } from "jsr:@std/cli/parse-args";
+import stringConstants from "../config/string_constants.json" with { type: "json" }
 
 
 const URL_BASE = "https://onepiece.fandom.com/wiki/Chapter_"
@@ -38,7 +39,7 @@ for (let chapter = parseInt(flags.min + ""); chapter <= parseInt(flags.max + "")
 }
 
 Debug.log("Writing to file...", scraperLogId)
-const path = (flags.r || flags.replace) ? "./src/config/chapter_data.json" : "chapter_data.json"
+const path = (flags.r || flags.replace) ? `./src/config/${stringConstants.chapterDataFileName}` : stringConstants.chapterDataFileName
 fs.writeFile(path, JSON.stringify(pageDetails), ((err) => (err) ? Debug.logError(err.message, scraperLogId) : null))
 
 Debug.logImportant("Finished!", scraperLogId)
