@@ -1,14 +1,14 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@std/assert@*": "1.0.6",
     "jsr:@std/assert@1": "1.0.6",
     "jsr:@std/cli@*": "1.0.6",
     "jsr:@std/dotenv@*": "0.225.2",
     "jsr:@std/internal@^1.0.4": "1.0.4",
-    "npm:@types/node@*": "22.5.4",
     "npm:axios@^1.7.7": "1.7.7",
     "npm:cheerio@1": "1.0.0",
-    "npm:discord.js@^14.17.2": "14.17.2"
+    "npm:discord.js@^14.17.3": "14.17.3"
   },
   "jsr": {
     "@std/assert@1.0.6": {
@@ -177,8 +177,8 @@
     "discord-api-types@0.37.115": {
       "integrity": "sha512-ivPnJotSMrXW8HLjFu+0iCVs8zP6KSliMelhr7HgcB2ki1QzpORkb26m71l1pzSnnGfm7gb5n/VtRTtpw8kXFA=="
     },
-    "discord.js@14.17.2": {
-      "integrity": "sha512-mrH6ziLVtNtId4bV4bsaUt5jE6NUaiHMPqO5VsSw1VVhFnjFi9duD8ctlo90/6cUH+8uyKBkoq9mSJ35SuuZ7Q==",
+    "discord.js@14.17.3": {
+      "integrity": "sha512-8/j8udc3CU7dz3Eqch64UaSHoJtUT6IXK4da5ixjbav4NAXJicloWswD/iwn1ImZEMoAV3LscsdO0zhBh6H+0Q==",
       "dependencies": [
         "@discordjs/builders",
         "@discordjs/collection@1.5.3",
@@ -794,7 +794,7 @@
       "jsr:@std/assert@1",
       "npm:axios@^1.7.7",
       "npm:cheerio@1",
-      "npm:discord.js@^14.17.2"
+      "npm:discord.js@^14.17.3"
     ]
   }
 }
