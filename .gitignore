@@ -5,3 +5,5 @@ stuff.ts
 hianime.html
 src/lib/APIs
 src/lib/util/Random.ts
+.dockerignore
+Dockerfile
