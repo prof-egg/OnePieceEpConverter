@@ -2,8 +2,6 @@ import Discord from "discord.js"
 import Util from "../../lib/util/Util.ts";
 import { ECommandTags, ISlashCommandFunc, ISlashCommandAutocompleteFunc } from "../../lib/handlers/file-handlers/CommandHandler.ts";
 import episodesJson from "../../config/episode_data.json" with { type: "json" }
-import chaptersJson from "../../config/chapter_data.json" with { type: "json" }
-import hianimeEpisodeJson from "../../config/hianime_id_data.json" with { type: "json" }
 
 const MAX_EPISODE = episodesJson.length
 const queryOption = "episode"
@@ -12,7 +10,7 @@ const commandFunction: ISlashCommandFunc = async (interaction, options, client, 
 
     let episodeIndex = options.getInteger(queryOption) ?? 1
     episodeIndex--
-    if (episodeIndex >= MAX_EPISODE) episodeIndex = MAX_EPISODE - 1
+    if (episodeIndex >= MAX_EPISODE) return interaction.reply({embeds: [Util.embedMessage("Sorry, I don't know that episode!")] })
     if (episodeIndex < 0) episodeIndex = 0
 
     const episodeData = episodesJson[episodeIndex]
@@ -33,7 +31,7 @@ const commandFunction: ISlashCommandFunc = async (interaction, options, client, 
     const embed = Util.baseEmbed(false)
         .setTitle(englishInfo.epTitle + ((episodeData.statistics.isFiller) ? " (Filler)" : ""))
         .setThumbnail(episodeData.imageUrl)
-        .setDescription(`**This Episode:** [${episode}](${hianimeEpisodeJson[episode - 1].episode.link})`)
+        .setDescription(`**This Episode:** [${episode}](https://animekai.to/watch/one-piece-dk6r#ep=${episode})`)
         .setFields(fields)
         .setFooter({ text: (englishInfo.airdate) ? `${englishInfo.distributor} Airdate: ${englishInfo.airdate}` : englishInfo.distributor })
 
@@ -78,6 +76,6 @@ const buildData = new Discord.SlashCommandBuilder()
             .setRequired(true))
     .toJSON()
 
-const tags: ECommandTags[] = [ECommandTags.Complete, ECommandTags.Utility]
+const tags: ECommandTags[] = [ECommandTags.Complete, ECommandTags.Main]
 
 export { commandFunction, autocomplete, buildData, tags }
