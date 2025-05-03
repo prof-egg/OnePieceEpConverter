@@ -1,9 +1,7 @@
 import Discord from "discord.js"
 import Util from "../../lib/util/Util.ts";
 import { ECommandTags, ISlashCommandFunc, ISlashCommandAutocompleteFunc } from "../../lib/handlers/file-handlers/CommandHandler.ts";
-import episodesJson from "../../config/episode_data.json" with { type: "json" }
 import chaptersJson from "../../config/chapter_data.json" with { type: "json" }
-import Debug from "../../lib/util/Debug.ts";
 
 const MAX_Chapter = chaptersJson.length
 const queryOption = "chapter"

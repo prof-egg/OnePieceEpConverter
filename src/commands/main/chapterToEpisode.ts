@@ -3,7 +3,6 @@ import Util from "../../lib/util/Util.ts";
 import { ECommandTags, ISlashCommandFunc, ISlashCommandAutocompleteFunc } from "../../lib/handlers/file-handlers/CommandHandler.ts";
 import episodesJson from "../../config/episode_data.json" with { type: "json" }
 import chaptersJson from "../../config/chapter_data.json" with { type: "json" }
-// import hianimeEpisodeJson from "../../config/hianime_id_data.json" with { type: "json" }
 
 const MAX_CHAPTER = chaptersJson.length
 const queryOption = "chapter"
