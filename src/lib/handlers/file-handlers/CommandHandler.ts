@@ -368,8 +368,7 @@ export interface ISlashCommandAutocompleteFunc { // There is a strong chance tha
  * based on the tags in the file.
  */
 export enum ECommandTags {
-    General,
-    Economy,
+    Main,
     Utility,
     Useless,
     Complete,
