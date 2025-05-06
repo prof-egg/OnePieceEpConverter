@@ -20,7 +20,9 @@ const commandFunction: ISlashCommandFunc = async (interaction, options, client, 
     fields.push({ name: "Japanese Title", value: chapterData.chapterInfo.japaneseTitle, inline: true })
     fields.push({ name: "Released", value: chapterData.chapterInfo.releaseDate, inline: true })
     // fields.push({ name: " ", value: " ", inline: true})
-    fields.push({ name: "Related Episodes", value: chapterData.chapterInfo.episodes.join(", "), /**inline: true*/ })
+
+    const relatedEpsExist = chapterData.chapterInfo.episodes.length > 0
+    fields.push({ name: "Related Episodes", value: (relatedEpsExist) ? chapterData.chapterInfo.episodes.join(", ") : "No episodes related yet", /**inline: true*/ })
     // fields.push({ name: "Is Filler", value: (episodeData.statistics.isFiller) ? "Yes" : "No", inline: true })
     // fields.push({ name: " ", value: " ", inline: true})
 

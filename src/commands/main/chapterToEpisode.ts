@@ -28,7 +28,9 @@ const commandFunction: ISlashCommandFunc = async (interaction, options, client, 
     fields.push({ name: "Japanese Title", value: episodeData.japaneseInfo.kanj, inline: true })
     fields.push({ name: "Released", value: episodeData.japaneseInfo.airdate, inline: true })
     if (isRemastered) fields.push({ name: " ", value: " ", inline: true})
-    fields.push({ name: "All Related Episodes", value: chapterData.chapterInfo.episodes.join(", "), inline: isRemastered })
+    
+    const relatedEpsExist = chapterData.chapterInfo.episodes.length > 0
+    fields.push({ name: "All Related Episodes", value: (relatedEpsExist) ? chapterData.chapterInfo.episodes.join(", ") : "No episodes related yet", inline: isRemastered })
     if (isRemastered) {
         fields.push({ name: "Remastered", value: episodeData.japaneseInfo.remasterAirdate as string, inline: true})
         fields.push({ name: " ", value: " ", inline: true})
