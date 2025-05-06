@@ -1,17 +1,16 @@
 {
   "tasks": {
-    "sh": "deno run --allow-all src/scripts/scrapeHianime.ts",
-    "se": "deno run --allow-all src/scripts/scrapeEpisodes.ts",
-    "sc": "deno run --allow-all src/scripts/scrapeChapters.ts",
     "start": "deno run --allow-all src/client.ts",
     "refresh": "deno run --allow-net --allow-env --allow-read src/scripts/refreshCommands.ts",
     "test": "deno run --allow-all test.ts",
-    "build": "deno bundle app.ts app.bundle.js"
+    "build": "deno bundle app.ts app.bundle.js",
+    "stuff": "deno run --allow-all stuff.ts"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
     "axios": "npm:axios@^1.7.7",
     "cheerio": "npm:cheerio@^1.0.0",
+    "cron": "npm:cron@^4.3.0",
     "discord.js": "npm:discord.js@^14.17.3"
   },
   "nodeModulesDir": "auto"
