@@ -8,8 +8,8 @@
 import Discord, { ColorResolvable } from "discord.js"
 import clientconfig from "../../config/client.json" with { type: "json" }
 import colorconfig from "../../config/colors.json" with { type: "json" }
-import { TEpisodeData } from "../../scripts/scrapeEpisodes.ts";
-import { TChapterData } from "../../scripts/scrapeChapters.ts";
+import { TEpisodeData } from "../../lib/scrapers/episodeScraper.ts";
+import { TChapterData } from "../../lib/scrapers/chapterScraper.ts";
 import Debug from "./Debug.ts";
 
 const logger = "Util"
