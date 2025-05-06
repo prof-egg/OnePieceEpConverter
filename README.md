@@ -5,14 +5,15 @@ If you want this for yourself follow the steps below listed in the **Setup** sec
 
 ## Why
 Sometimes when following the one piece story, some people like switch between reading the manga and watching the anime, though it's not exactly 1 to 1.
-For example, chapter 500 in the manga is actually episode 394 in the anime. You can look up the conversions on the [One Piece Wiki](https://onepiece.fandom.com/wiki/One_Piece_Wiki) or look up the conversions on a site like [this](https://onepiece.d1g1t.net/), but I also kind of wanted to just make the bot anyway because I thought it was interesting.
+For example, chapter 500 in the manga is actually episode 394 in the anime. You can look up the conversions on the [One Piece Wiki](https://onepiece.fandom.com/wiki/One_Piece_Wiki) or look up the conversions on a site like [this](https://onepiece.d1g1t.net/), but I also kind of wanted to just make the bot anyway for fun.
 
 ## How it Works:
 Basically I just scraped the [One Piece Wiki](https://onepiece.fandom.com/wiki/One_Piece_Wiki) for the data on episodes and chapters and downloaded the data to some json files.
 Then with that data I made a discord bot that can use that data to convert between chapters and episodes and vice-versa. 
 I also made some commands for just getting some information about a desired episode or chapter if you didn't want to explicitly convert them.
 
-# Setup
+# Setup (OUTDATED DONT FOLLOW)
+> ⚠️ **Notice:** I have since updated the bot to be setup with docker but I don't feel like documenting that yet.
 ### Your Enviroment
 - Install [VS Code](https://code.visualstudio.com/download).
 - Install a **command-line package manager and installer** like [chocolatey](https://chocolatey.org/install#individual).
