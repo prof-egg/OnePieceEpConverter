@@ -2,9 +2,13 @@
 node_modules
 .env
 stuff.ts
+
 src/lib/APIs
 src/lib/util/Random.ts
-.dockerignore
+
 Dockerfile
+docker-compose.yml
+.dockerignore
+
 src/config/episode_data.json
 src/config/chapter_data.json
